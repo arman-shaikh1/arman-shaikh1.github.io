@@ -1,155 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arman Shaikh | Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: #bdc3c7;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 2rem;
-        }
-        .section-title {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            color: #2c3e50;
-        }
-        .timeline {
-            border-left: 3px solid #3498db;
-            padding-left: 20px;
-            margin-top: 20px;
-        }
-        .job {
-            margin-bottom: 25px;
-        }
-        .job h3 {
-            margin: 0;
-            color: #2980b9;
-        }
-        .job .meta {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-bottom: 10px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .skill-box {
-            background: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-left: 4px solid #3498db;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #2c3e50;
-            color: #fff;
-            margin-top: 40px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arman Shaikh | Executive Portfolio</title>
+<style>
+:root {
+--primary: #0f172a;
+--secondary: #3b82f6;
+--text-main: #334155;
+--text-light: #64748b;
+--bg-main: #f8fafc;
+--bg-card: #ffffff;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+line-height: 1.7;
+color: var(--text-main);
+margin: 0;
+padding: 0;
+background-color: var(--bg-main);
+}
+header {
+background-color: var(--primary);
+color: white;
+padding: 4rem 2rem;
+text-align: center;
+}
+header h1 {
+margin: 0 0 10px 0;
+font-size: 3rem;
+letter-spacing: -1px;
+}
+header p {
+font-size: 1.2rem;
+color: #cbd5e1;
+margin: 0 0 20px 0;
+font-weight: 300;
+}
+.contact-links a {
+color: white;
+text-decoration: none;
+margin: 0 10px;
+padding: 8px 20px;
+border: 1px solid rgba(255,255,255,0.3);
+border-radius: 30px;
+font-size: 0.9rem;
+transition: background 0.3s;
+display: inline-block;
+margin-bottom: 10px;
+}
+.contact-links a:hover {
+background-color: rgba(255,255,255,0.1);
+}
+.container {
+max-width: 900px;
+margin: -40px auto 40px auto;
+background: var(--bg-card);
+padding: 3rem;
+border-radius: 12px;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+h2.section-title {
+color: var(--primary);
+font-size: 1.8rem;
+border-bottom: 2px solid #e2e8f0;
+padding-bottom: 10px;
+margin-top: 2.5rem;
+margin-bottom: 1.5rem;
+}
+.summary {
+font-size: 1.1rem;
+color: var(--text-main);
+}
+.timeline {
+position: relative;
+padding-left: 30px;
+}
+.timeline::before {
+content: '';
+position: absolute;
+left: 0;
+top: 5px;
+bottom: 0;
+width: 2px;
+background: #e2e8f0;
+}
+.job {
+position: relative;
+margin-bottom: 2.5rem;
+}
+.job::before {
+content: '';
+position: absolute;
+left: -35px;
+top: 6px;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: var(--secondary);
+border: 3px solid white;
+box-shadow: 0 0 0 2px var(--secondary);
+}
+.job h3 {
+margin: 0 0 5px 0;
+color: var(--primary);
+font-size: 1.3rem;
+}
+.job .meta {
+font-weight: 600;
+color: var(--secondary);
+font-size: 0.95rem;
+margin-bottom: 15px;
+}
+.job .meta span {
+color: var(--text-light);
+font-weight: 400;
+}
+.job ul {
+margin: 0;
+padding-left: 20px;
+color: var(--text-main);
+}
+.job li {
+margin-bottom: 8px;
+}
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+}
+.skill-box {
+background: var(--bg-main);
+padding: 15px 20px;
+border-radius: 8px;
+border-left: 4px solid var(--secondary);
+font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+.container {
+margin: 0;
+border-radius: 0;
+padding: 1.5rem;
+}
+}
+</style>
 </head>
 <body>
-
 <header>
-    <h1>Arman Shaikh</h1>
-    <p> Sales & Operations Manager | Business Development Leader</p>
-    <div style="margin-top: 20px;">
-        <a href="mailto:armans313@hotmail.com" style="color: #fff; text-decoration: none; margin: 5px; border: 1px solid #fff; padding: 5px 15px; border-radius: 20px; display: inline-block;">Email Me</a>
-        <a href="tel:+971552054569" style="color: #fff; text-decoration: none; margin: 5px; border: 1px solid #fff; padding: 5px 15px; border-radius: 20px; display: inline-block;">Call Me</a>
-        <a href="https://linkedin.com/in/arman-shaikh" target="_blank" style="color: #fff; text-decoration: none; margin: 5px; border: 1px solid #fff; padding: 5px 15px; border-radius: 20px; display: inline-block;">LinkedIn</a>
-    </div>
-</header>
-
-<div class="container">
-    
-    <h2 class="section-title">Executive Summary</h2>
-    <p>Dynamic commercial operations leader with extensive executive experience driving business development and regional sales management across the GCC and India. Bilingual in English and Hindi with working proficiency in Arabic. Proven expertise in leveraging enterprise CRM architectures and digital assets to optimize sales pipelines, penetrate new territories, and scale operational efficiency.</p>
-
-    <h2 class="section-title">Core Competencies</h2>
-    <div class="skills-grid">
-        <div class="skill-box"><strong>Enterprise CRMs:</strong> Salesforce, Odoo CRM, Bitrix24, HubSpot</div>
-        <div class="skill-box"><strong>Languages:</strong> English, Hindi, Arabic (Working Proficiency)</div>
-        <div class="skill-box"><strong>Digital Operations:</strong> AI Video/Image Generation, Graphic Design (Marketing Assets)</div>
-        <div class="skill-box"><strong>Mobility:</strong> Valid UAE Driving License</div>
-    </div>
-
-    <h2 class="section-title">Career Trajectory</h2>
-    <div class="timeline">
-        <div class="job">
-            <h3>Business Development Manager</h3>
-            <div class="meta">Arctic World Consultancy | Sharjah | Jun 2025 – Aug 2026</div>
-        </div>
-        <div class="job">
-            <h3>Business Development Manager</h3>
-            <div class="meta">Althoud Group | Riyadh | Dec 2024 – Jun 2025</div>
-        </div>
-        <div class="job">
-            <h3>Regional Sales Manager / Branch Manager</h3>
-            <div class="meta">Albatross Consultant | Doha & Riyadh | Sep 2021 – Nov 2024</div>
-        </div>
-        <div class="job">
-            <h3>Sales Consultant</h3>
-            <div class="meta">Y-Axis | Mumbai | Aug 2019 – Aug 2021</div>
-        </div>
-        <div class="job">
-            <h3>Assistant Manager, Import & Export</h3>
-            <div class="meta">G1 Enterprises | Mumbai | Oct 2017 – Jul 2019</div>
-        </div>
-        <div class="job">
-            <h3>Senior Sales Executive</h3>
-            <div class="meta">Care24 | Mumbai | Feb 2016 – Aug 2017</div>
-        </div>
-        <div class="job">
-            <h3>Territory Sales Executive</h3>
-            <div class="meta">AAB Pvt. Ltd. | Mumbai | Oct 2013 – Nov 2015</div>
-        </div>
-    </div>
-
-    <h2 class="section-title">Education</h2>
-    <div class="job">
-        <h3>Bachelor of Commerce and Information Technology</h3>
-        <div class="meta">University of Mumbai | Completed 2014</div>
-    </div>
-    <div class="job">
-        <h3>Higher Secondary Certificate</h3>
-        <div class="meta">Thakur College of Science & Commerce | Completed 2011</div>
-    </div>
-
+<h1>Arman Shaikh</h1>
+<p>Sales & Business Development Leadership | Branch & Regional Sales Management | B2B/B2C Growth</p>
+<div class="contact-links">
+<a href="mailto:armans313@hotmail.com">Email Me</a>
+<a href="tel:+971552054569">Call Me</a>
+<a href="https://linkedin.com/in/arman-shaikh" target="_blank">LinkedIn</a>
 </div>
-
-<footer>
-    <p>&copy; 2026 Arman Shaikh. All rights reserved.</p>
-</footer>
-
+</header>  
+<div class="container">
+<h2 class="section-title">Executive Profile</h2>
+<p class="summary">Sales and business development leader with 13+ years across B2B/B2C sales, branch operations and regional performance management spanning the GCC, South Asia, Southeast Asia and African markets. Track record of turning underperforming branches and regions into consistent revenue growth, including a 5x revenue increase in 4 months at Arctic World Consultancy and a first-ever AED 2.5M monthly milestone for the Albatross regional network. Skilled at building and coaching high-performing sales teams, designing KPI and incentive structures, implementing CRM systems and owning the full sales cycle from frontline consultative selling through P&L accountability.</p>
+<h2 class="section-title">Core Competencies</h2>
+<div class="skills-grid">
+<div class="skill-box"><strong>Sales Leadership:</strong> B2B & B2C Sales, New Client Acquisition, Pipeline & Conversion Management</div>
+<div class="skill-box"><strong>Operations:</strong> Branch & Regional Sales Management, P&L Budgeting, KPI Design & Incentive Structures</div>
+<div class="skill-box"><strong>Enterprise CRMs:</strong> Salesforce, Odoo CRM, Bitrix24, LMS</div>
+<div class="skill-box"><strong>Languages:</strong> English (C2), Hindi (C2), Arabic (B1)</div>
+</div>
+<h2 class="section-title">Professional Experience</h2>
+<div class="timeline">
+<div class="job">
+<h3>Sales Manager</h3>
+<div class="meta">Arctic World Consultancy | Sharjah, UAE <span>| Jun 2025 – Aug 2026</span></div>
+<ul>
+<li>Built the UAE sales operation from the ground up, establishing market positioning, CRM processes, pricing strategy and acquisition channels while leading a 12-person team.</li>
+<li>Delivered a 5x revenue increase, from ~US10K to US50K monthly, within 4 months, achieving a record month of 63 client closures.</li>
+<li>Slashed vendor, office and staffing/incentive costs ~40% through budget restructuring, directly improving margin while sustaining growth.</li>
+<li>Engineered a multi-channel acquisition engine spanning Meta, TikTok, referrals, partnerships, outbound prospecting and cold email.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Sales Manager</h3>
+<div class="meta">Althoud Group | Riyadh, Saudi Arabia <span>| Dec 2024 – Jun 2025</span></div>
+<ul>
+<li>Took full commercial and operational ownership of a 90-member organization spanning Sales, Customer Service, Finance and Delivery.</li>
+<li>Overhauled hiring and training on joining, deploying dedicated supervisors across a 15-member team and lifting individual daily delivery-target completion to 85% through new turnaround-time SLAs.</li>
+<li>Grew monthly revenue 2.5x, from a ~SAR 200K pre-tenure level to a SAR 500K peak, through regional team segregation, retraining and stronger TPA and company contracts.</li>
+<li>Mobilized ~80 delivery personnel supporting SMSA Express, Aramex, DHL, Keeta, Jahez, Mrsool, HungerStation and Noon Food across Riyadh, Jeddah, Dammam and Taif.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Regional Sales Manager</h3>
+<div class="meta">Albatross Consultants | Riyadh, Saudi Arabia <span>| Apr 2023 – Nov 2024</span></div>
+<ul>
+<li>Directed regional sales performance across 11 branches and 82 employees spanning Saudi Arabia, UAE, Qatar, Kuwait, Bahrain, Malaysia and India, leading and coaching 10 Branch Managers.</li>
+<li>Propelled the network to a first-ever AED 2.5M monthly revenue mark by promoting top performers on merit and reallocating budget to lift client and rep morale, earning a cash bonus and iPhone award.</li>
+<li>Introduced Odoo CRM, biometric attendance and sales dashboards, designing KPIs across prospect-to-sale, quote-to-close, sales-per-rep and upsell/cross-sell ratios.</li>
+<li>Advanced market-entry and expansion into Jeddah, Dammam and Kuala Lumpur.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Branch Sales Manager</h3>
+<div class="meta">Albatross Consultants | Riyadh, Saudi Arabia <span>| Mar 2022 – Mar 2023</span></div>
+<ul>
+<li>Owned end-to-end performance for a 9-member team, growing average monthly revenue from a AED 175-200K baseline to consistently exceeding AED 300K, 50%+ over target.</li>
+<li>Served 1,698 clients, lifting client referral rate ~20% and positive review volume 75% by training staff on retention and query-resolution quality.</li>
+<li>Cut team attrition by introducing a merit-based internal growth policy tied to performance recognition and incentives.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Immigration Sales Consultant</h3>
+<div class="meta">Y-Axis Immigration | Mumbai, India <span>| Aug 2019 – Aug 2021</span></div>
+<ul>
+<li>Converted ~120 monthly client enquiries into Canada/Australia PR, study-visa and admissions outcomes, ranking as top performer for the Mumbai operation in a peak month.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Assistant Manager</h3>
+<div class="meta">G1 Enterprises | Mumbai, India <span>| Oct 2017 – Jul 2019</span></div>
+<ul>
+<li>Led a 5-member team across sourcing, vendor negotiation and export fulfilment, handling 2-3 containers per week for Africa/GCC exports.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Senior Sales Executive</h3>
+<div class="meta">Care24 | Mumbai, India <span>| Feb 2016 – Aug 2017</span></div>
+<ul>
+<li>Drove B2C home-healthcare and equipment sales against a daily target of ~3 sales through needs-based consultative selling.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Territory Sales Executive</h3>
+<div class="meta">AAB Pvt. Ltd. | Mumbai, India <span>| Oct 2013 – Nov 2015</span></div>
+<ul>
+<li>Built B2B accounts across South Mumbai corporates, hotels and elite construction sites, notably securing a landmark supply account for Antilia.</li>
+</ul>
+</div>
+</div>
+<h2 class="section-title">Education & Certifications</h2>
+<div class="timeline">
+<div class="job">
+<h3>Bachelor of Commerce & Information Technology</h3>
+<div class="meta">University of Mumbai <span>| 2014</span></div>
+</div>
+<div class="job">
+<h3>Higher Secondary Certificate (Accounting & Marketing)</h3>
+<div class="meta">Thakur College of Science & Commerce <span>| 2011</span></div>
+</div>
+<div class="job">
+<h3>Certified Global Mobility / Immigration Consultant</h3>
+<div class="meta">Y-Axis Test System</div>
+</div>
+</div>
+</div>
 </body>
 </html>
